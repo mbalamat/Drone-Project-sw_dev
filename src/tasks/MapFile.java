@@ -1,4 +1,5 @@
 package tasks;
+
 //READY
 import java.io.*;
 import java.util.*;
@@ -6,6 +7,9 @@ import java.util.*;
 public class MapFile {
 
 	private int[][] map = new int[10][10];
+	
+	private List<Integer> xlist = new ArrayList<>();
+	private List<Integer> ylist = new ArrayList<>();
 
 	public void getMapFile() {
 		Scanner inputStream = null;
@@ -43,6 +47,7 @@ public class MapFile {
 	}
 
 	public void echoMap() {
+		// boolean oneDrone=true;
 		for (int i = 0; i < 10; i++) {
 			if (i == 0) {
 				System.out.println("_________________________________________");
@@ -51,13 +56,16 @@ public class MapFile {
 				if (j == 0) {
 					System.out.print("| ");
 				}
-				if (map[i][j]==0){
+				if (map[i][j] == 0) {
 					System.out.print(" ");
-				}else if(map[i][j]==1){
-					System.out.print("X");					
-				}else if(map[i][j]==2){
-					System.out.print("O");					
-				}else{
+				} else if (map[i][j] == 1) {
+					// check if 2 drones givven on map???
+					System.out.print("X");
+				} else if (map[i][j] == 2) {
+					xlist.add(i);
+					ylist.add(j);
+					System.out.print("O");
+				} else {
 					System.out.print("E");// Stands for error
 				}
 
@@ -71,9 +79,9 @@ public class MapFile {
 	}
 
 	// testing my class
-	public static void main(String[] args) {
-		MapFile map1 = new MapFile();
-		map1.getMapFile();
-		map1.echoMap();
-	}
+	// public static void main(String[] args) {
+	// MapFile map1 = new MapFile();
+	// map1.getMapFile();
+	// map1.echoMap();
+	// }
 }
