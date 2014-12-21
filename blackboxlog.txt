@@ -1,0 +1,7 @@
+~~~~~~Head of the log file of the drone's BlackBox system, this line was generated automatically~~~~~~
+Something
+SomethingMore
+SomethingLess
+SomethingMore
+SomethingLess
+SomethingMore
