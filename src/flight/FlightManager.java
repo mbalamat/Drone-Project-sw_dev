@@ -1,6 +1,9 @@
 package flight;
 
-public abstract class FlightManager {
+import tasks.iBat;
+import tasks.iMap;
+
+public abstract class FlightManager implements iBat, iMap{
 	protected int batteryCapacity;
 	protected int xInitPos;
 	protected int yInitPos;
@@ -37,17 +40,29 @@ public abstract class FlightManager {
 		if (s==null){
 			System.out.println("Nowhere to go!!!");
 		}else if (s=="up"){
-			this.yGPSpos+=1;
-			this.ypos+=1;
-		}else if (s=="down"){
-			this.yGPSpos-=1;
-			this.ypos-=1;
-		}else if (s=="left"){
-			this.xGPSpos-=1;
-			this.xpos-=1;
-		}else if (s=="right"){
 			this.xGPSpos+=1;
 			this.xpos+=1;
+			batman.updateBattery(1);
+			map1.refreshMap(this.xpos, this.ypos);
+			//map1.echoMap();
+		}else if (s=="down"){
+			this.xGPSpos-=1;
+			this.xpos-=1;
+			batman.updateBattery(1);
+			map1.refreshMap(this.xpos, this.ypos);
+			//map1.echoMap();
+		}else if (s=="left"){
+			this.yGPSpos-=1;
+			this.ypos-=1;
+			batman.updateBattery(1);
+			map1.refreshMap(this.xpos, this.ypos);
+			//map1.echoMap();
+		}else if (s=="right"){
+			this.yGPSpos+=1;
+			this.ypos+=1;
+			batman.updateBattery(1);
+			map1.refreshMap(this.xpos, this.ypos);
+			//map1.echoMap();
 		}else{
 			System.out.println("Didn't move");
 		}

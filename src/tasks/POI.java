@@ -9,7 +9,10 @@ public class POI {
 		this.y=y;
 	}
 	
-	public POI getPOI(){
-		return this;
+	public int getX(){
+		return x;
+	}
+	public int getY(){
+		return y;
 	}
 }

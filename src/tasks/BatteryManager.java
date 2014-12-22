@@ -15,7 +15,7 @@ public class BatteryManager implements iBBox {
 	}
 
 	public int getBatteryCap() {
-		bbx.logActivity("Battery Cap: at " + batteryCapacity+"%");
+		bbx.logActivity("Battery Cap: at " + batteryCapacity + "%");
 		return batteryCapacity;
 	}
 
