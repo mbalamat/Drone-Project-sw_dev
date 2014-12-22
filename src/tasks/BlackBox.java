@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
+
 public class BlackBox {
 	private String log = "~~~~~~Head of the log file of the drone's BlackBox system, this line was generated automatically~~~~~~";
 	private boolean sent = false;

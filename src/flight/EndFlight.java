@@ -1,5 +1,5 @@
 package flight;
 
-public class EndFlight extends FlightManager{
+public class EndFlight{
 
 }

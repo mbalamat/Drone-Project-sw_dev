@@ -1,7 +1,4 @@
 ~~~~~~Head of the log file of the drone's BlackBox system, this line was generated automatically~~~~~~
-Something
-SomethingMore
-SomethingLess
-SomethingMore
-SomethingLess
-SomethingMore
+Battery Cap: at 95%
+Something is draining a lot of battery...!
+Battery Cap: at 95%

@@ -33,7 +33,8 @@ public class FailSafeMode {
 		return isFailSafeModeOn;
 
 	}
-
+//Stand alone testing
+	
 //	public static void main(String[] args) {
 //		FailSafeMode fm = new FailSafeMode();
 //		fm.initializeFmode();

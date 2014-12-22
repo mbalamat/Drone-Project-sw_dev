@@ -7,9 +7,8 @@ import java.util.*;
 public class MapFile {
 
 	private int[][] map = new int[10][10];
-	
-	private List<Integer> xlist = new ArrayList<>();
-	private List<Integer> ylist = new ArrayList<>();
+	private List<POI> POIlist = new ArrayList<>();
+	protected POI base; 
 
 	public void getMapFile() {
 		Scanner inputStream = null;
@@ -35,6 +34,9 @@ public class MapFile {
 			while (tokenizer.hasMoreTokens() && j < 10) {
 				String s = tokenizer.nextToken();
 				map[i][j] = Integer.parseInt(s);
+				if (map[i][j]==1){
+					base = new POI(i,j);
+				}
 				j++;
 				if (j == 10) {
 					j = 0;
@@ -62,11 +64,16 @@ public class MapFile {
 					// check if 2 drones givven on map???
 					System.out.print("X");
 				} else if (map[i][j] == 2) {
-					xlist.add(i);
-					ylist.add(j);
+					POI temp = new POI(i,j);
+					POIlist.add(temp);
 					System.out.print("O");
+				}else if (map[i][j]==3){
+					System.out.print("@");//Water..
+				}else if (map[i][j]==5){
+					System.out.print("*");//Route..				
 				} else {
-					System.out.print("E");// Stands for error
+					System.out.println("Error On Map");// Stands for error
+					System.exit(0);
 				}
 
 				System.out.print(" | ");
@@ -77,11 +84,13 @@ public class MapFile {
 			System.out.println("_________________________________________");
 		}
 	}
+	
 
-	// testing my class
-	// public static void main(String[] args) {
-	// MapFile map1 = new MapFile();
-	// map1.getMapFile();
-	// map1.echoMap();
-	// }
+	 //testing my class
+	
+//	 public static void main(String[] args) {
+//	 MapFile map1 = new MapFile();
+//	 map1.getMapFile();
+//	 map1.echoMap();
+//	 }
 }
