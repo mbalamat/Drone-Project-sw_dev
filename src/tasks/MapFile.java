@@ -8,7 +8,7 @@ public class MapFile implements iBBox {
 
 	private int[][] map = new int[10][10];
 	private List<POI> POIlist = new ArrayList<>();
-	protected POI base;
+	private POI base;
 
 	public void getMapFile() {
 		Scanner inputStream = null;
@@ -35,7 +35,7 @@ public class MapFile implements iBBox {
 				String s = tokenizer.nextToken();
 				map[i][j] = Integer.parseInt(s);
 				if (map[i][j] == 1) {
-					base = new POI(i, j);
+					setBase(new POI(i, j));
 				}
 				j++;
 				if (j == 10) {
@@ -109,6 +109,14 @@ public class MapFile implements iBBox {
 		}
 		System.out.println("Moved to: " + "(" + x + "," + y + ")");
 		bbx.logActivity("Moved to: " + "(" + x + "," + y + ")");
+	}
+
+	public POI getBase() {
+		return base;
+	}
+
+	public void setBase(POI base) {
+		this.base = base;
 	}
 
 	// testing my class

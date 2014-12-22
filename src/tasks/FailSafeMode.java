@@ -1,6 +1,6 @@
 package tasks;
 
-public class FailSafeMode {
+public class FailSafeMode implements iBBox, iBat{
 	private boolean isFailSafeModeOn = false;
 	private boolean secondarySystems = true;
 	private boolean returningHome = false;
@@ -22,6 +22,7 @@ public class FailSafeMode {
 		if (x == true) {
 			System.out
 					.println("Warning Something went awfully WRONG FailSafeMode is on...");
+			bbx.logActivity("Warning Something went awfully WRONG FailSafeMode is on...");
 		}
 	}
 
@@ -30,9 +31,15 @@ public class FailSafeMode {
 		killAllSecondarySystems();
 		sendDistressSignal(!secondarySystems);
 		returningHome();
+		bbx.logActivity("Warning Something went awfully WRONG, Returning Home");
 		return isFailSafeModeOn;
 
 	}
+	
+	public boolean getFMstatus(){
+		return isFailSafeModeOn;
+	}
+	
 //Stand alone testing
 	
 //	public static void main(String[] args) {

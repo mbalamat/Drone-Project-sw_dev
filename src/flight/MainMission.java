@@ -3,8 +3,9 @@ package flight;
 import tasks.*;
 
 public class MainMission extends FlightManager implements iMap, iPhoto, iBat,
-		iBBox {
+		iBBox, iFMode {
 	private boolean moved = false;
+	private boolean proceed = true;
 
 	public MainMission(StartFlight that) {
 		super(that.batteryCapacity, that.xpos, that.ypos, that.connection,
@@ -14,7 +15,7 @@ public class MainMission extends FlightManager implements iMap, iPhoto, iBat,
 
 	public void movetopoint() {// don't forget to remove the top POI after using
 								// it
-		while (map1.getNextPOI() != null) {
+		while (map1.getNextPOI() != null && canProceed()) {
 			if (map1.getNextPOI().getY() > this.ypos) {
 				while (!(map1.getNextPOI().getY() == this.ypos)) {
 					move("right");
@@ -78,8 +79,7 @@ public class MainMission extends FlightManager implements iMap, iPhoto, iBat,
 		cam.shootVideo();
 		batman.updateBattery(1);
 		map1.echoMap();
-		map1.rmTopPOI();
-		;
+		map1.rmTopPOI();//------remove TopPOI from ArrayList
 	}
 
 	public void getGPScoorFromTeam() {
@@ -94,6 +94,16 @@ public class MainMission extends FlightManager implements iMap, iPhoto, iBat,
 //	public void checkSystems() {
 //
 //	}
+	
+	public boolean canProceed(){
+		if (batman.canContinue()){
+			return true; 
+		}else{
+			proceed=false;
+			fm.initializeFmode();
+			return proceed;
+		}
+	}
 
 	public boolean getMovedStatus() {
 		return moved;
