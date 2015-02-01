@@ -1,12 +1,15 @@
 package tasks;
 
 public class BatteryManager implements iBBox {
-	private int batteryCapacity = 100;
+	private int batteryCapacity; // experimenting with values
 	private boolean contigency;
-
+	
+	
+	
 	public void updateBattery(int x) {
 		if (batteryCapacity > x) {
 			batteryCapacity -= x;
+			getBatteryCap();
 		} else {
 			System.out.println("Something is draining a lot of battery...!");
 			bbx.logActivity("Something is draining a lot of battery...!");
@@ -16,6 +19,10 @@ public class BatteryManager implements iBBox {
 
 	public int getBatteryCap() {
 		bbx.logActivity("Battery Cap: at " + batteryCapacity + "%");
+		if (this.batteryCapacity<=4){
+			System.out.println("Battery extremely low shutting down...");
+			System.exit(0);
+		}
 		return batteryCapacity;
 	}
 
@@ -28,6 +35,10 @@ public class BatteryManager implements iBBox {
 		}
 	}
 
+	public void setBatteryCap(int x) {
+		batteryCapacity=x;
+	}
+	
 	// testing
 
 	// public static void main(String[] args){

@@ -6,6 +6,7 @@ public class MainMission extends FlightManager implements iMap, iPhoto, iBat,
 		iBBox, iFMode {
 	private boolean moved = false;
 	private boolean proceed = true;
+	//private boolean returnToBase = false;
 
 	public MainMission(StartFlight that) {
 		super(that.batteryCapacity, that.xpos, that.ypos, that.connection,
@@ -15,7 +16,7 @@ public class MainMission extends FlightManager implements iMap, iPhoto, iBat,
 
 	public void movetopoint() {// don't forget to remove the top POI after using
 								// it
-		while (map1.getNextPOI() != null && canProceed()) {
+		while (map1.getNextPOI() != map1.getBase() && canProceed()) {
 			if (map1.getNextPOI().getY() > this.ypos) {
 				while (!(map1.getNextPOI().getY() == this.ypos)) {
 					move("right");
@@ -74,14 +75,19 @@ public class MainMission extends FlightManager implements iMap, iPhoto, iBat,
 
 	public void checkPOI() {
 		// if on POI
+		POI temp = new POI(this.xpos,this.ypos);
+		if(temp.getX()==map1.getBase().getX() && temp.getY()==map1.getBase().getY() && map1.POIlist.get(0)==null){
+			System.out.println("Home reached...");
+			bbx.logActivity("Home Reached");
+			System.exit(0);
+		}
 		cam.shootIRphoto();
 		cam.shootRphoto();
 		cam.shootVideo();
-		batman.updateBattery(1);
+		batman.updateBattery(1);//takes an extra battery point
 		map1.echoMap();
 		map1.rmTopPOI();//------remove TopPOI from ArrayList
 	}
-
 	public void getGPScoorFromTeam() {
 		map1.getMapFile();
 		map1.echoMap();

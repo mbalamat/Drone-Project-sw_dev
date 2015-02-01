@@ -1,6 +1,6 @@
 package tasks;
 
-public class FailSafeMode implements iBBox, iBat{
+public class FailSafeMode implements iBBox, iBat, iMap{
 	private boolean isFailSafeModeOn = false;
 	private boolean secondarySystems = true;
 	private boolean returningHome = false;
@@ -27,13 +27,19 @@ public class FailSafeMode implements iBBox, iBat{
 	}
 
 	public boolean initializeFmode() {
-		isFailSafeModeOn = true;
-		killAllSecondarySystems();
-		sendDistressSignal(!secondarySystems);
-		returningHome();
-		bbx.logActivity("Warning Something went awfully WRONG, Returning Home");
+		if (!(map1.POIlist.get(0)==null)){	
+			isFailSafeModeOn = true;
+			killAllSecondarySystems();
+			sendDistressSignal(!secondarySystems);
+			returningHome();
+			bbx.logActivity("Warning Something went awfully WRONG, Returning Home");
+		
+		}else{
+			System.out.println("Home reached...");
+			bbx.logActivity("Home Reached");
+			System.exit(0);
+		}
 		return isFailSafeModeOn;
-
 	}
 	
 	public boolean getFMstatus(){

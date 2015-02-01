@@ -1,12 +1,19 @@
 package flight;
 
+import tasks.POI;
+
 //import tasks.*;
 
 public class StartFlight extends FlightManager {
 
 	public StartFlight(int b, int x, int y, boolean c, boolean e) {
 		super(b, x, y, c, e);
-
+		if (checkSystems()==false){
+			System.exit(0);
+		}
+		batman.setBatteryCap(b);
+		POI temp = new POI(x,y);
+		map1.setBase(temp);
 	}
 
 

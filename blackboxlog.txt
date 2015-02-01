@@ -1,95 +1,215 @@
 ~~~~~~Head of the log file of the drone's BlackBox system, this line was generated automatically~~~~~~
+Battery Cap: at 99%
 Moved to: (0,1)
+Battery Cap: at 98%
 Moved to: (0,2)
+Battery Cap: at 97%
 Moved to: (0,3)
+Battery Cap: at 96%
 Moved to: (0,4)
+Battery Cap: at 95%
 Moved to: (0,5)
-Moved to: (1,5)
-Moved to: (2,5)
-Moved to: (3,5)
+Battery Cap: at 94%
+Moved to: (0,6)
+Battery Cap: at 93%
+Moved to: (0,7)
+Battery Cap: at 92%
+Moved to: (0,8)
+Battery Cap: at 91%
+Moved to: (0,9)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (3,4)
-Moved to: (4,4)
+Battery Cap: at 90%
+Battery Cap: at 89%
+Moved to: (0,8)
+Battery Cap: at 88%
+Moved to: (0,7)
+Battery Cap: at 87%
+Moved to: (0,6)
+Battery Cap: at 86%
+Moved to: (0,5)
+Battery Cap: at 85%
+Moved to: (0,4)
+Battery Cap: at 84%
+Moved to: (0,3)
+Battery Cap: at 83%
+Moved to: (0,2)
+Battery Cap: at 82%
+Moved to: (0,1)
+Battery Cap: at 81%
+Moved to: (0,0)
+Battery Cap: at 80%
+Moved to: (1,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (4,5)
-Moved to: (5,5)
-Moved to: (6,5)
+Battery Cap: at 79%
+Battery Cap: at 78%
+Moved to: (2,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (6,4)
-Moved to: (6,3)
-Moved to: (6,2)
-Moved to: (6,1)
-Moved to: (7,1)
+Battery Cap: at 77%
+Battery Cap: at 76%
+Moved to: (3,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (8,1)
+Battery Cap: at 75%
+Battery Cap: at 74%
+Moved to: (4,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (8,2)
-Moved to: (8,3)
-Moved to: (8,4)
-Moved to: (7,4)
-Moved to: (6,4)
-Moved to: (5,4)
-Moved to: (4,4)
+Battery Cap: at 73%
+Battery Cap: at 72%
+Moved to: (5,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (4,5)
-Moved to: (5,5)
-Moved to: (6,5)
+Battery Cap: at 71%
+Battery Cap: at 70%
+Moved to: (6,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (6,4)
-Moved to: (6,3)
-Moved to: (6,2)
-Moved to: (6,1)
-Moved to: (7,1)
+Battery Cap: at 69%
+Battery Cap: at 68%
+Moved to: (7,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (8,1)
+Battery Cap: at 67%
+Battery Cap: at 66%
+Moved to: (8,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (8,2)
-Moved to: (8,3)
-Moved to: (8,4)
-Moved to: (8,5)
-Moved to: (7,5)
-Moved to: (6,5)
+Battery Cap: at 65%
+Battery Cap: at 64%
+Moved to: (9,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (6,4)
-Moved to: (6,3)
-Moved to: (6,2)
-Moved to: (6,1)
-Moved to: (7,1)
+Battery Cap: at 63%
+Battery Cap: at 62%
+Moved to: (8,0)
+Battery Cap: at 61%
+Moved to: (7,0)
+Battery Cap: at 60%
+Moved to: (6,0)
+Battery Cap: at 59%
+Moved to: (5,0)
+Battery Cap: at 58%
+Moved to: (4,0)
+Battery Cap: at 57%
+Moved to: (3,0)
+Battery Cap: at 56%
+Moved to: (2,0)
+Battery Cap: at 55%
+Moved to: (1,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (8,1)
+Battery Cap: at 54%
+Battery Cap: at 53%
+Moved to: (2,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (7,1)
+Battery Cap: at 52%
+Battery Cap: at 51%
+Moved to: (3,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
-Moved to: (8,1)
+Battery Cap: at 50%
+Battery Cap: at 49%
+Moved to: (4,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
+Battery Cap: at 48%
+Battery Cap: at 47%
+Moved to: (5,0)
 IR Photo Taken
 Normal Photo Taken
 Video Taken
+Battery Cap: at 46%
+Battery Cap: at 45%
+Moved to: (6,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 44%
+Battery Cap: at 43%
+Moved to: (7,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 42%
+Battery Cap: at 41%
+Moved to: (8,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 40%
+Battery Cap: at 39%
+Moved to: (9,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 38%
+Battery Cap: at 37%
+Moved to: (8,0)
+Battery Cap: at 36%
+Moved to: (7,0)
+Battery Cap: at 35%
+Moved to: (6,0)
+Battery Cap: at 34%
+Moved to: (5,0)
+Battery Cap: at 33%
+Moved to: (4,0)
+Battery Cap: at 32%
+Moved to: (3,0)
+Battery Cap: at 31%
+Moved to: (2,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 30%
+Battery Cap: at 29%
+Moved to: (3,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 28%
+Battery Cap: at 27%
+Moved to: (4,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 26%
+Battery Cap: at 25%
+Moved to: (5,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 24%
+Battery Cap: at 23%
+Moved to: (6,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 22%
+Battery Cap: at 21%
+Moved to: (7,0)
+IR Photo Taken
+Normal Photo Taken
+Video Taken
+Battery Cap: at 20%
+Battery Cap: at 19%
+Moved to: (8,0)
+Warning Something went awfully WRONG FailSafeMode is on...
+Warning Something went awfully WRONG, Returning Home

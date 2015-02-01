@@ -4,10 +4,10 @@ package tasks;
 import java.io.*;
 import java.util.*;
 
-public class MapFile implements iBBox {
+public class MapFile implements iBBox, iMap {
 
 	private int[][] map = new int[10][10];
-	private List<POI> POIlist = new ArrayList<>();
+	public List<POI> POIlist = new ArrayList<>();
 	private POI base;
 
 	public void getMapFile() {
@@ -62,8 +62,10 @@ public class MapFile implements iBBox {
 					System.out.print(" ");
 				} else if (map[i][j] == 1) {
 					// check if 2 drones givven on map???
-					System.out.print("X");
-				} else if (map[i][j] == 2) {
+					//System.out.print("X");
+					POI temp = new POI(i, j);//?????
+					setBase(temp);
+				} else if (map[i][j] == 2) {//POI
 					POI temp = new POI(i, j);
 					POIlist.add(temp);
 					System.out.print("O");
@@ -90,8 +92,15 @@ public class MapFile implements iBBox {
 	public POI getNextPOI() {
 		if (!POIlist.isEmpty()) {
 			return POIlist.get(0);
-		} else {
-			System.out.println("End of POIs...");
+		}else if(POIlist.size()==0){
+			System.out.println("Mission Complete!!!Returning home...");
+			POIlist.add(null);
+			return base;
+		}
+		else{
+			
+			System.out.println("Home reached...");
+			
 			return null;
 		}
 	}
@@ -119,6 +128,9 @@ public class MapFile implements iBBox {
 		this.base = base;
 	}
 
+	public void appendPoint(POI z){
+		POIlist.add(z);
+	}
 	// testing my class
 
 	// public static void main(String[] args) {

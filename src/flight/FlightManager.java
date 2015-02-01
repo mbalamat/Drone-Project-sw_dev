@@ -39,6 +39,7 @@ public abstract class FlightManager implements iBat, iMap{
 		// somehow to do it that too
 		if (s==null){
 			System.out.println("Nowhere to go!!!");
+			System.exit(0);
 		}else if (s=="up"){
 			this.xGPSpos+=1;
 			this.xpos+=1;
